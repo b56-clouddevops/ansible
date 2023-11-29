@@ -118,3 +118,10 @@ Ansible can be operated in 2 ways :
                     - aws
                     - gcp
 ```
+
+
+### How to run ansible-playbooks ?
+
+```
+    $ ansible-playbook -i inv  -e ansible_user=centos  -e ansible_password=DevOps321 playBookName.yaml
+```
