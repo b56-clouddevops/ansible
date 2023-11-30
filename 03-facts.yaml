@@ -7,6 +7,10 @@
  - name: Demo on facts 
    hosts: prod
    tasks:
-    - name: Printing the facts 
+    - name: Printing the OS 
       ansible.builtin.debug:
         msg: OS Distribution is {{ansible_distribution}}  
+
+    - name: Printing the MacAddress 
+      ansible.builtin.debug:
+        msg: MAC Address is {{ansible_default_ipv4.macaddress}}  
