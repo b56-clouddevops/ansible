@@ -3,7 +3,7 @@
   tasks: 
     - name: Demo On Using Loops 
       ansible.builtin.debug:
-        msg: "Value Is {{item}}"
+        msg: "Value Is {{item}}"      # item is a key word and will be picked on each iteration
       loop: 
         - 100
         - 200
