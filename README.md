@@ -125,3 +125,16 @@ Ansible can be operated in 2 ways :
 ```
     $ ansible-playbook -i inv  -e ansible_user=centos  -e ansible_password=DevOps321 playBookName.yaml
 ```
+
+
+### When to use quotes for variables in an ansible playbook ?
+
+```
+    Ansible supports quotes for Variables!
+
+    When you're just using the variable only, then you don't need to place quotes instead use it directly {{ENV}}
+
+     When you're variables in between the lines ,then ensure you place them in quotes instead use it directly "Name of the environment is {{ENV}}" 
+
+
+```
