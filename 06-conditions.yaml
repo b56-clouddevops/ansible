@@ -20,6 +20,6 @@
 
     - name: Run this action when action is not defined
       ansible.builtin.debug: 
-        msg: Action is undefined   
+        msg: Action is undefined
       when: action is undefined
       
