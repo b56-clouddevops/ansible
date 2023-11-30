@@ -24,6 +24,9 @@
       ansible.builtin.debug:
         msg: Value of the xyz is {{XYZ}}         # In bash, we print a variable by using ${var}, but here in YAML we use {{var}}
 
+    - name: Printing ENV Specific Values
+      ansible.builtin.debug:
+        msg: "Instance Type is {{INSTANCE_TYPE:}} and disk size is {{DISK_SIZE}}"  
 
     # - name: Printing the unknown variable 
     #   ansible.builtin.debug:

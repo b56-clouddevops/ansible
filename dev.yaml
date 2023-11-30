@@ -1,2 +1,2 @@
 INSTANCE_TYPE: "t3.micro"
-DISK_SIZS: "10gb"
+DISK_SIZE: "10gb"
