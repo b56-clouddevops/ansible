@@ -26,7 +26,7 @@
 
     - name: Printing ENV Specific Values
       ansible.builtin.debug:
-        msg: "Instance Type is {{INSTANCE_TYPE:}} and disk size is {{DISK_SIZE}}"  
+        msg: "Instance Type is {{INSTANCE_TYPE}} and disk size is {{DISK_SIZE}}"  
 
     # - name: Printing the unknown variable 
     #   ansible.builtin.debug:
