@@ -1,5 +1,4 @@
 # Demo on copying the files to remote servers
-
 - name: Demo on file copy 
   hosts: all 
   tasks:
