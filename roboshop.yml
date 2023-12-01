@@ -1,4 +1,4 @@
 - name: Configuring Roboshop Project
-  hosts: all
+  hosts: frontend
   roles:
     - role: frontend
