@@ -1,3 +1,4 @@
+# Package module is going to install the package and this works irrespective of the flavor of linux.
 - name: Demo on using package module 
   hosts: all 
   become: True 
