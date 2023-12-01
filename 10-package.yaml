@@ -1,5 +1,6 @@
 - name: Demo on using package module 
   hosts: all 
+  become: True 
   tasks: 
     - name: Installing Nginx
       ansible.builtin.package:
