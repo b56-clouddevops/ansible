@@ -6,4 +6,4 @@
     - name: Copying the file
       ansible.builtin.copy:
         src: systemd.service                       # Location of the file on the machine where you're running this cript
-        dest: /home/centos/systemd.service         # Location of the file where you want to copy this to remote server.
+        dest: /home/centos/system/systemd.service         # Location of the file where you want to copy this to remote server.
