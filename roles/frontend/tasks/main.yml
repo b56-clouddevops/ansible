@@ -21,5 +21,5 @@
 
 - name: Copying {{COMPONENT}}
   ansible.builtin.copy:
-    src: /tmp/frontend-main/static                    # Location of the file on the machine where you're running this cript
-    dest: /usr/share/nginx/html                       # Location of the file where you want to copy this to remote server.
+    src: /tmp/frontend-main/static/                    # Location of the file on the machine where you're running this cript
+    dest: /usr/share/nginx/html/                      # Location of the file where you want to copy this to remote server.
