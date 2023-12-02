@@ -30,7 +30,7 @@
 - name: Injecting Users & Catalogue Schema 
   community.mongodb.mongodb_shell:
     file: "/tmp/mongodb-main/{{item}}.js"
-    idempotent: yes 
+    idempotent: yes
   loop: 
-    - users.js 
-    - catalogue.js 
+    - users 
+    - catalogue
