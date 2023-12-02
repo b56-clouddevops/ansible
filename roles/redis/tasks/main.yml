@@ -22,7 +22,7 @@
 
 - name: Starting {{COMPONENT}} Service
   ansible.builtin.systemd:
-    name: mongod 
+    name: "{{COMPONENT}}" 
     state: started
     enabled: yes
     daemon_reload: yes
