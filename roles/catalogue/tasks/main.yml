@@ -29,3 +29,7 @@
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
     remote_src: yes 
+
+- name: Generating {{COMPONENT}} Artifacts
+  community.general.npm:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
