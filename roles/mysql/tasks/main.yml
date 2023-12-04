@@ -19,11 +19,15 @@
     src: /var/log/mysqld.log
   register: psw_log 
 
-- name: Pritning the password file 
-  debug:
-    msg: "{{psw_log['content'] | b64decode | regex_findall('.*temporary password.*')| join('') |split(' ') | last}}"
+# - name: Pritning the password file 
+#   debug:
+#     msg: "{{psw_log['content'] | b64decode | regex_findall('.*temporary password.*')| join('') |split(' ') | last}}"
 
-# - name: Extracing the password from logFile  
-#   ansible.builtin.set_fact:
-#     DEFAULT_PASSWORD: "{{ psw_log['content'] }}"
+- name: Extracing the password from logFile  
+  ansible.builtin.set_fact:
+    DEFAULT_PASSWORD: "{{psw_log['content'] | b64decode | regex_findall('.*temporary password.*')| join('') |split(' ') | last}}" 
+
+- name: Changind default root password 
+  ansible.builtin.shell:  echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1'" | mysql --connect-expired-password -uroot -p$DEFAULT_PASSWORD 
+
   
