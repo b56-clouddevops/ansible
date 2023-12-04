@@ -21,7 +21,7 @@
 
 - name: Pritning the password file 
   debug:
-    msg: "{{psw_log['content'] | b64decode | regex_findall('.*temporary password.*')| split(' ') | last}}"
+    msg: "{{psw_log['content'] | b64decode | regex_findall('.*temporary password.*')| join('') |split(' ') | last}}"
 
 # - name: Extracing the password from logFile  
 #   ansible.builtin.set_fact:
