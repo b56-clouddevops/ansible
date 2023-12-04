@@ -21,7 +21,7 @@
 
 - name: Pritning the password file 
   debug:
-    msg: "{{psw_log['content']}}"
+    msg: "{{psw_log['content'] | b64decode}}"
 
 # - name: Extracing the password from logFile  
 #   ansible.builtin.set_fact:
