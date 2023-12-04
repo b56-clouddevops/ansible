@@ -53,10 +53,6 @@
     login_user: root
     login_password: "{{MYSQL_PSW}}"
     target: /tmp/{{COMPONENT}}-main/shipping.sql 
-
-- name: Configuring the Server Name 
-  ansible.builtin.shell: set-hostname {{COMPONENT}}
-      
       
 
  
