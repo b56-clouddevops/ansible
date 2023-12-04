@@ -25,7 +25,7 @@
     - name: Get MySQL version with non-default credentials
       community.mysql.mysql_info:
         login_user: root 
-        login_password: RoboShop@1
+        login_password: "{{MYSQL_PSW}}"
         filter: version
   rescue:
     - name: Extracting the password from logFile  
