@@ -1,2 +1,2 @@
 dependencies:
-  - role: mongodb
+  - role: common
