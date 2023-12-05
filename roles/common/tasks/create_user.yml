@@ -4,6 +4,5 @@
   register: USERINFO 
 
 - name: Registering the APPUSER Info 
-  ansible.builting.debug: 
+  ansible.builtin.debug: 
     msg: Value of user info is {{USERINFO}}
-    
