@@ -2,7 +2,7 @@
   ansible.builtin.file:
     path: /home/{{APPUSER}}/{{COMPONENT}}
     state: absent
-  ignore_errors: yes 
+  ignore_errors: True 
 
 - name: Creating {{COMPONENT}} App Directory
   ansible.builtin.file:
@@ -16,5 +16,3 @@
     src: http://172.31.34.215:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
     dest: /home/{{APPUSER}}/{{COMPONENT}}/ 
     remote_src: yes  
-
-
