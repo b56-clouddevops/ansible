@@ -28,6 +28,11 @@
     name: common
     tasks_from: config_svc
 
+- name: Configuring Beats
+  ansible.builtin.include_role:
+    name: elk
+    tasks_from: filebeat
+
 - name: set-hostname 
   ansible.builtin.include_role:
     name: common

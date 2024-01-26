@@ -25,6 +25,11 @@
     src: roboshop.conf                
     dest: /etc/nginx/default.d/roboshop.conf           
 
+- name: Configuring Beats
+  ansible.builtin.include_role:
+    name: elk
+    tasks_from: filebeat
+
 - name: Restarting Frontend Service
   ansible.builtin.systemd:
     name: nginx
