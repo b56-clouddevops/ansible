@@ -36,3 +36,8 @@
     state: restarted
     enabled: yes
     daemon_reload: yes
+
+- name: set-hostname 
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: set_hostname
