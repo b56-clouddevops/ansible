@@ -50,6 +50,12 @@
     name: elk
     tasks_from: filebeat
 
+- name: Configuring RSYSLOG
+  ansible.builtin.include_role:
+    name: elk
+    tasks_from: rsyslog
+
+
 - name: set-hostname 
   ansible.builtin.include_role:
     name: common
