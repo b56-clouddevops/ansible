@@ -25,6 +25,11 @@
     src: roboshop.conf                
     dest: /etc/nginx/default.d/roboshop.conf           
 
+- name: Copying {{COMPONENT}} Config
+  ansible.builtin.template:
+    src: nginx.conf                
+    dest: /etc/nginx/nginx.conf   
+
 - name: Configuring Beats
   ansible.builtin.include_role:
     name: elk
