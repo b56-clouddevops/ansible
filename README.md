@@ -167,3 +167,34 @@ An Ansible role has a defined directory structure with eight main standard direc
                 main.yml      #  <-- role dependencies
 
 ```
+
+
+### How to convert the unstructued logs to structued in ELK ?
+```
+    Using GROK Debugger : https://grokdebugger.com/
+
+    How do we know the patterns : https://github.com/hpcugent/logstash-patterns/blob/master/files/grok-patterns
+```
+
+### Let's understand the log pattern of frontend : 
+
+```
+10.0.0.159 - - [27/Jan/2024:00:40:54 +0000] "GET / HTTP/1.1" 200 2542 "-" "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)" "199.45.154.17"
+```
+
+### After Transforming the logPatter : 
+27/Jan/2024:01:12:18 +0000 10.0.0.226 GET /users/sign_in HTTP/1.1 404 153 0.00
+
+'$time_local $remote_addr $request $status $body_bytes_sent $request_time' ; 
+
+
+### How to convert Unstructred Logs To Structued ???/
+```
+    Grok Debugger : This tool can convert the unstructured logs to structued.
+```
+
+### Grok Pattern for the above log :
+
+```
+    %{HTTPDATE:log_timestamp}%{SPACE}%{IP:source_ip}%{SPACE}%{WORD:method}%{SPACE}%{PATH:http_path}%{SPACE}%{WORD}/%{NUMBER}%{SPACE}%{NUMBER:http_status:int}%{SPACE}%{NUMBER:no_of_bytes_sent:int}%{SPACE}%{NUMBER:response_time:float}
+```
